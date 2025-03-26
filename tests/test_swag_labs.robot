@@ -3,7 +3,7 @@ Documentation     A test suite.
 Library  SeleniumLibrary
 
 *** Variables ***
-${LOGIN URL}      http://localhost:7272
+${LOGIN URL}      https://emusa002.github.io/automated_test_pipeline/index.html
 ${BROWSER}        headlesschrome
 
 *** Test Cases ***
