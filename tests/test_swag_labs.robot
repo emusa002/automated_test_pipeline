@@ -10,29 +10,30 @@ ${BROWSER}        headlesschrome
 Valid Login
     Open Browser To Login Page
     Maximize browser window
-#    Input Username    demo
-#    Input Password    mode
-#    Submit Credentials
-#    Welcome Page Should Be Open
+    Input Username    standard_user
+    Input Password    secret_sauce
+    Submit Credentials
+    Shopping Page Should Be Open
     Minimize browser window
     [Teardown]    Close Browser
 
 *** Keywords ***
 Open Browser To Login Page
     Open Browser    ${LOGIN URL}    ${BROWSER}
-    Title Should Be    Login Page
+    Title Should Be    Swag Labs
 
 Input Username
     [Arguments]    ${username}
-    Input Text    username_field    ${username}
+    Input Text    username    ${username}
 
 Input Password
     [Arguments]    ${password}
-    Input Text    password_field    ${password}
+    Input Text    password    ${password}
 
 Submit Credentials
-    Click Button    login_button
+    Click Button    login-button
 
-Welcome Page Should Be Open
-    Title Should Be    Welcome Page
+Shopping Page Should Be Open
+    Title Should Be    Swag Labs
+    Wait until element is visible    id=product-page
 
